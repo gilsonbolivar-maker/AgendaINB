@@ -1,25 +1,22 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@import "tailwindcss";
-@import "tw-animate-css";
-
 @theme {
   --font-sans: "Figtree", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Fraunces", "Iowan Old Style", Georgia, serif;
 
-  --color-bg: #e9c020;
-  --color-surface: #fff8d0;
-  --color-raised: #f7e078;
-  --color-fg: #1f1802;
-  --color-muted: #5e4c0c;
-  --color-subtle: #8a7014;
-  --color-border: #c9a61a;
-  --color-accent: #1f1802;
-  --color-accent-fg: #f0cc2a;
-  --color-danger: #a31b12;
-  --color-danger-fg: #fff6d4;
-  --color-ring: #1f1802;
+  --color-bg: #f4efe4;
+  --color-surface: #fffdf8;
+  --color-raised: #f0e9db;
+  --color-fg: #39332a;
+  --color-muted: #6b6355;
+  --color-subtle: #948b7b;
+  --color-border: #e2d9c8;
+  --color-accent: #8a6d3f;
+  --color-accent-fg: #fffdf8;
+  --color-danger: #9b4f43;
+  --color-danger-fg: #fffdf8;
+  --color-ring: #8a6d3f;
 
   --radius-xs: 0.25rem;
   --radius-sm: 0.5rem;
@@ -27,8 +24,8 @@
   --radius-lg: 1rem;
   --radius-xl: 1.5rem;
 
-  --shadow-card: 0 0 0 1px rgba(31, 24, 2, 0.1);
-  --shadow-card-hover: 0 0 0 1px rgba(31, 24, 2, 0.18);
+  --shadow-card: 0 0 0 1px rgba(57, 51, 42, 0.08);
+  --shadow-card-hover: 0 0 0 1px rgba(57, 51, 42, 0.14);
 
   --ease-smooth-out: cubic-bezier(0.22, 1, 0.36, 1);
   --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
