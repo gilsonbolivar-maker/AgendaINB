@@ -10,18 +10,18 @@
   --font-sans: "Figtree", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Fraunces", "Iowan Old Style", Georgia, serif;
 
-  --color-bg: #f4efe4;
-  --color-surface: #fffdf8;
-  --color-raised: #f0e9db;
-  --color-fg: #39332a;
-  --color-muted: #5f5749;
-  --color-subtle: #857c6b;
-  --color-border: #e2d9c8;
-  --color-accent: #8a6d3f;
-  --color-accent-fg: #fffdf8;
-  --color-danger: #9b4f43;
-  --color-danger-fg: #fffdf8;
-  --color-ring: #8a6d3f;
+  --color-bg: #fdf8f4;
+  --color-surface: #ffffff;
+  --color-raised: #fff3ea;
+  --color-fg: #2e2a26;
+  --color-muted: #6b625a;
+  --color-subtle: #9a8f85;
+  --color-border: #f0ddcd;
+  --color-accent: #c2410c;
+  --color-accent-fg: #ffffff;
+  --color-danger: #be123c;
+  --color-danger-fg: #ffffff;
+  --color-ring: #c2410c;
 
   --radius-xs: 0.25rem;
   --radius-sm: 0.5rem;
@@ -29,8 +29,8 @@
   --radius-lg: 1rem;
   --radius-xl: 1.5rem;
 
-  --shadow-card: 0 0 0 1px rgba(57, 51, 42, 0.08);
-  --shadow-card-hover: 0 0 0 1px rgba(57, 51, 42, 0.14);
+  --shadow-card: 0 0 0 1px rgba(46, 42, 38, 0.08);
+  --shadow-card-hover: 0 0 0 1px rgba(46, 42, 38, 0.14);
 
   --ease-smooth-out: cubic-bezier(0.22, 1, 0.36, 1);
   --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
@@ -38,8 +38,8 @@
 
 @layer base {
   html {
-    /* Subpixel rendering keeps stems solid on the light cream palette;
-       grayscale antialiasing thinned them out and read as blurry. */
+    /* Subpixel rendering keeps stems solid on the white palette; grayscale
+       antialiasing thinned them out and read as blurry. */
     -webkit-font-smoothing: subpixel-antialiased;
     -moz-osx-font-smoothing: auto;
     font-optical-sizing: auto;
