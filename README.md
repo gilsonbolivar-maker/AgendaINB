@@ -30,15 +30,24 @@ estática — sem servidor, sem banco e sem autenticação.
 npm run build:pages     # gera dist-pages/
 ```
 
-O site está no ar em https://gilsonbolivar-maker.github.io/AgendaINB/ e o
-deploy é automático a cada push na `main`. Também dá para disparar à mão em
-**Actions → Deploy to GitHub Pages → Run workflow**.
+### Passo obrigatório, uma única vez
 
-Num repositório onde o Pages ainda nunca foi ligado, a primeira execução
-falha em `actions/configure-pages` com *"Resource not accessible by
-integration"*: o `GITHUB_TOKEN` consegue publicar, mas não consegue criar o
-site do zero. Nesse caso, ligue uma vez em **Settings → Pages → Build and
-deployment → Source: GitHub Actions** e rode o workflow de novo.
+Em **Settings → Pages → Build and deployment**, escolha
+**Source: GitHub Actions**.
+
+Sem isso o Pages fica em modo `legacy` (*"Deploy from a branch: main"*) e
+**todo push na `main` dispara um build Jekyll** que publica o README
+renderizado por cima do deploy deste workflow — os dois correm em paralelo e
+o Jekyll costuma terminar por último.
+
+O workflow tenta trocar sozinho via `PUT /repos/{owner}/{repo}/pages`
+`{"build_type":"workflow"}`, mas o `GITHUB_TOKEN` responde **HTTP 403
+"Resource not accessible by integration"** tanto para criar quanto para
+alterar o site. Só um admin do repositório consegue, pela tela de Settings.
+
+Feito o ajuste, rode **Actions → Deploy to GitHub Pages → Run workflow**. A
+partir daí o deploy é automático a cada push na `main`, e o site fica em
+https://gilsonbolivar-maker.github.io/AgendaINB/
 
 O caminho base vem de `PAGES_BASE` (o workflow passa o nome do repositório).
 Em um fork com outro nome, ou numa página de usuário/organização servida na
