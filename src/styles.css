@@ -9,8 +9,8 @@
   --color-surface: #fffdf8;
   --color-raised: #f0e9db;
   --color-fg: #39332a;
-  --color-muted: #6b6355;
-  --color-subtle: #948b7b;
+  --color-muted: #5f5749;
+  --color-subtle: #857c6b;
   --color-border: #e2d9c8;
   --color-accent: #8a6d3f;
   --color-accent-fg: #fffdf8;
@@ -33,8 +33,12 @@
 
 @layer base {
   html {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    /* Subpixel rendering keeps stems solid on the light cream palette;
+       grayscale antialiasing thinned them out and read as blurry. */
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+    font-optical-sizing: auto;
+    font-synthesis-weight: none;
   }
 
   html,

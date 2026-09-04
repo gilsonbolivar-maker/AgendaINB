@@ -32,7 +32,7 @@ export const Route = createRootRoute({
     ],
   }),
   component: () => (
-    <html lang="pt-BR" className="antialiased" suppressHydrationWarning>
+    <html lang="pt-BR" className="subpixel-antialiased" suppressHydrationWarning>
       <head>
         <HeadContent />
       </head>
