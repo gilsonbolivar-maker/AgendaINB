@@ -1,6 +1,11 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+/* Tailwind's automatic source detection starts at the Vite root, and the static
+   Pages build (vite.pages.config.ts) roots at `pages/`. Naming the app's source
+   tree keeps both builds scanning the same files for utility classes. */
+@source "../src";
+
 @theme {
   --font-sans: "Figtree", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Fraunces", "Iowan Old Style", Georgia, serif;
